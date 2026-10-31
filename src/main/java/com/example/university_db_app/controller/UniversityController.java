@@ -1,24 +1,26 @@
 package com.example.university_db_app.controller; 
   
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.example.university_db_app.dto.CourseCountDto; 
-import com.example.university_db_app.dto.CourseDto; 
-import com.example.university_db_app.dto.EnrollmentDto; 
-import com.example.university_db_app.dto.LecturerDto; 
-import com.example.university_db_app.dto.StudentDto; 
-import com.example.university_db_app.model.Course; 
-import com.example.university_db_app.repository.CourseRepository; 
-import com.example.university_db_app.repository.DepartmentRepository; 
-import com.example.university_db_app.repository.EnrollmentRepository; 
-import com.example.university_db_app.repository.StudentRepository; 
+import com.example.university_db_app.dto.CourseDto;
+import com.example.university_db_app.dto.EnrollmentDto;
+import com.example.university_db_app.dto.LecturerDto;
+import com.example.university_db_app.dto.StudentDto;
+import com.example.university_db_app.model.Course;
+import com.example.university_db_app.repository.CourseRepository;
+import com.example.university_db_app.repository.DepartmentRepository;
+import com.example.university_db_app.repository.EnrollmentRepository;
+import com.example.university_db_app.repository.StudentRepository;
+
 import lombok.RequiredArgsConstructor; 
-import org.springframework.http.ResponseEntity; 
-import org.springframework.web.bind.annotation.GetMapping; 
-import org.springframework.web.bind.annotation.PathVariable; 
-import org.springframework.web.bind.annotation.RequestMapping; 
-import org.springframework.web.bind.annotation.RequestParam; 
-import org.springframework.web.bind.annotation.RestController; 
-  
-import java.util.List; 
   
 /** Read-only JSON endpoints that let you see the result of every repository query in the 
 browser. */ 
